@@ -7,6 +7,8 @@ import {
   Dimensions,
   SafeAreaView,
 } from 'react-native';
+import { COLORS } from '../../constants/colors';
+import { SIZES } from '../../constants/sizes';
 
 const { width } = Dimensions.get('window');
 
@@ -93,84 +95,84 @@ const GenderScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.background,
   },
   content: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 30,
+    paddingHorizontal: SIZES.spacing[5],
+    paddingVertical: SIZES.spacing[7],
   },
   title: {
-    fontSize: 24,
+    fontSize: SIZES.font['3xl'],
     fontWeight: '600',
-    color: '#1F2121',
-    marginBottom: 40,
-    marginTop: 20,
+    color: COLORS.gray800,
+    marginBottom: SIZES.spacing[10],
+    marginTop: SIZES.spacing[5],
   },
   optionsContainer: {
-    gap: 20,
+    gap: SIZES.spacing[5],
     alignItems: 'center',
   },
   optionButton: {
-    width: width - 80,
-    paddingVertical: 30,
-    borderRadius: 12,
+    width: width - SIZES.spacing[20],
+    paddingVertical: SIZES.spacing[7] + 2,
+    borderRadius: SIZES.radius.lg,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: COLORS.surface,
     borderWidth: 2,
-    borderColor: '#E5E5E5',
+    borderColor: COLORS.gray200,
   },
   optionButtonSelected: {
-    borderColor: '#7C3AED',
+    borderColor: COLORS.primary,
     backgroundColor: '#F3E8FF',
   },
   iconText: {
     fontSize: 40,
-    marginBottom: 12,
+    marginBottom: SIZES.spacing[3],
   },
   optionLabel: {
-    fontSize: 16,
+    fontSize: SIZES.font.lg,
     fontWeight: '500',
-    color: '#626C6C',
+    color: COLORS.gray600,
   },
   optionLabelSelected: {
-    color: '#7C3AED',
+    color: COLORS.primary,
   },
   button: {
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#7C3AED',
+    backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'flex-end',
-    marginBottom: 20,
+    marginBottom: SIZES.spacing[5],
   },
   buttonDisabled: {
-    backgroundColor: '#D4D4D4',
+    backgroundColor: COLORS.gray300,
     opacity: 0.5,
   },
   buttonText: {
     fontSize: 28,
-    color: '#ffffff',
+    color: COLORS.textInverse,
     fontWeight: '600',
   },
   pagination: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 8,
-    paddingBottom: 20,
+    gap: SIZES.spacing[2],
+    paddingBottom: SIZES.spacing[5],
   },
   dot: {
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: COLORS.gray200,
   },
   dotActive: {
-    backgroundColor: '#7C3AED',
+    backgroundColor: COLORS.primary,
     width: 24,
   },
 });
