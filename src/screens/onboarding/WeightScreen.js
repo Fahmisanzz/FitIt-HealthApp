@@ -8,6 +8,8 @@ import {
   SafeAreaView,
   ScrollView,
 } from 'react-native';
+import { COLORS } from '../../constants/colors';
+import { SIZES } from '../../constants/sizes';
 
 const { width } = Dimensions.get('window');
 
@@ -83,7 +85,7 @@ const WeightScreen = ({ navigation }) => {
           onPress={handleComplete}
           activeOpacity={0.8}
         >
-          <Text style={styles.buttonText}→</Text>
+          <Text style={styles.buttonText}>→</Text>
         </TouchableOpacity>
       </View>
 
@@ -101,28 +103,28 @@ const WeightScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.background,
   },
   content: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 30,
+    paddingHorizontal: SIZES.spacing[5],
+    paddingVertical: SIZES.spacing[7],
   },
   title: {
-    fontSize: 24,
+    fontSize: SIZES.font['3xl'],
     fontWeight: '600',
-    color: '#1F2121',
-    marginBottom: 40,
-    marginTop: 20,
+    color: COLORS.gray800,
+    marginBottom: SIZES.spacing[10],
+    marginTop: SIZES.spacing[5],
   },
   weightPickerWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
     height: 200,
-    backgroundColor: '#F5F5F5',
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    gap: 12,
+    backgroundColor: COLORS.surface,
+    borderRadius: SIZES.radius.lg,
+    paddingHorizontal: SIZES.spacing[4],
+    gap: SIZES.spacing[3],
   },
   pickerColumnWrapper: {
     flex: 1,
@@ -132,18 +134,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   pickerItem: {
-    paddingVertical: 14,
-    paddingHorizontal: 8,
+    paddingVertical: SIZES.spacing[3] + 1,
+    paddingHorizontal: SIZES.spacing[2],
     alignItems: 'flex-end',
   },
   pickerItemText: {
-    fontSize: 14,
-    color: '#A7A9A9',
+    fontSize: SIZES.font.sm,
+    color: COLORS.textTertiary,
     fontWeight: '400',
   },
   pickerItemTextSelected: {
     fontSize: 32,
-    color: '#7C3AED',
+    color: COLORS.primary,
     fontWeight: '600',
   },
   unitWrapper: {
@@ -152,65 +154,65 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   unitText: {
-    fontSize: 18,
+    fontSize: SIZES.font.xl,
     fontWeight: '600',
-    color: '#7C3AED',
+    color: COLORS.primary,
   },
   selectedWeightContainer: {
-    marginTop: 30,
-    paddingHorizontal: 16,
-    paddingVertical: 16,
+    marginTop: SIZES.spacing[7],
+    paddingHorizontal: SIZES.spacing[4],
+    paddingVertical: SIZES.spacing[4],
     backgroundColor: '#F0F0F0',
-    borderRadius: 8,
+    borderRadius: SIZES.radius.base,
     borderLeftWidth: 4,
-    borderLeftColor: '#7C3AED',
+    borderLeftColor: COLORS.primary,
   },
   selectedWeightValue: {
     fontSize: 24,
-    color: '#7C3AED',
+    color: COLORS.primary,
     fontWeight: '600',
   },
   selectedWeightUnit: {
-    fontSize: 18,
-    color: '#626C6C',
+    fontSize: SIZES.font.lg,
+    color: COLORS.gray600,
     fontWeight: '500',
   },
   selectedWeightLabel: {
-    fontSize: 12,
-    color: '#A7A9A9',
-    marginTop: 4,
+    fontSize: SIZES.font.xs,
+    color: COLORS.textTertiary,
+    marginTop: SIZES.spacing[1],
     fontWeight: '400',
   },
   button: {
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#7C3AED',
+    backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'flex-end',
-    marginBottom: 20,
+    marginBottom: SIZES.spacing[5],
   },
   buttonText: {
     fontSize: 28,
-    color: '#ffffff',
+    color: COLORS.textInverse,
     fontWeight: '600',
   },
   pagination: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 8,
-    paddingBottom: 20,
+    gap: SIZES.spacing[2],
+    paddingBottom: SIZES.spacing[5],
   },
   dot: {
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: COLORS.gray200,
   },
   dotActive: {
-    backgroundColor: '#7C3AED',
+    backgroundColor: COLORS.primary,
     width: 24,
   },
 });
