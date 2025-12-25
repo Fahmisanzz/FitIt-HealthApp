@@ -7,8 +7,10 @@ import {
   Dimensions,
   SafeAreaView,
 } from 'react-native';
+import { COLORS } from '../../constants/colors';
+import { SIZES } from '../../constants/sizes';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const WelcomeScreen = ({ navigation }) => {
   const handleGetStarted = () => {
@@ -52,64 +54,64 @@ const WelcomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.background,
   },
   content: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 20,
+    paddingHorizontal: SIZES.spacing[5],
   },
   logoSection: {
     alignItems: 'center',
   },
   logoMain: {
-    fontSize: 48,
+    fontSize: SIZES.font[4xl],
     fontWeight: '600',
-    color: '#1F2121',
+    color: COLORS.gray800,
     letterSpacing: 1,
   },
   logoAccent: {
-    fontSize: 48,
+    fontSize: SIZES.font[4xl],
     fontWeight: '600',
-    color: '#FF6B35',
-    marginLeft: 4,
+    color: COLORS.orange,
+    marginLeft: SIZES.spacing[1],
   },
   tagline: {
-    fontSize: 14,
-    color: '#626C6C',
-    marginTop: 8,
+    fontSize: SIZES.font.base,
+    color: COLORS.gray600,
+    marginTop: SIZES.spacing[2],
     fontWeight: '400',
   },
   button: {
-    width: width - 40,
-    paddingVertical: 14,
-    backgroundColor: '#7C3AED',
-    borderRadius: 12,
+    width: width - SIZES.spacing[10],
+    paddingVertical: SIZES.spacing[3] + 2,
+    backgroundColor: COLORS.primary,
+    borderRadius: SIZES.radius.lg,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 40,
+    marginBottom: SIZES.spacing[10],
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: SIZES.font.lg,
     fontWeight: '600',
-    color: '#ffffff',
+    color: COLORS.textInverse,
   },
   pagination: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 8,
-    paddingBottom: 20,
+    gap: SIZES.spacing[2],
+    paddingBottom: SIZES.spacing[5],
   },
   dot: {
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: COLORS.gray200,
   },
   dotActive: {
-    backgroundColor: '#7C3AED',
+    backgroundColor: COLORS.primary,
     width: 24,
   },
 });
